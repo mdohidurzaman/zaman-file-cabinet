@@ -1,0 +1,16 @@
+<section class="content_create">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+               <h1 class="show_heading"><%= @doc.title %></h1>
+               <p><%= @doc.content %></p>
+               <div class="action_btn">
+               <%= link_to 'All document', docs_path, class: 'btn btn-md btn-info' %>
+               <%= link_to 'Edit document', edit_doc_path(@doc), class: 'btn btn-md btn-success' %>
+               <%= link_to 'Delete document', doc_path(@doc), class: 'btn btn-md btn-danger', method: 
+                           :delete, data: { confirm: "Are you sure?" } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
